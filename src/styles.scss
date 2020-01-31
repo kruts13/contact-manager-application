@@ -12,7 +12,7 @@ $candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-
 @include angular-material-theme($candy-app-theme);
 
 .dark-theme {
-  $primary-dark: mat-palette($mat-pink, 700);
+  $primary-dark: mat-palette($mat-lime, 800);
   $accent-dark: mat-palette($mat-green);
   $warn-dark: mat-palette($mat-red);
 

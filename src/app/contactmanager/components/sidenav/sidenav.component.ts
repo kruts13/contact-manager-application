@@ -17,11 +17,17 @@ export class SidenavComponent implements OnInit {
   private mediaMatcher: MediaQueryList =
     matchMedia(`(max-width: ${SMALL_WIDTH_BREAKPOINT}px)`);
   users: Observable<User[]>;
-  isDarkTheme: boolean = false;
+  isDarkTheme: boolean = true;
+  dir: string = 'ltr';
   @ViewChild(MatSidenav) sidenav: MatSidenav;
 
   toggleTheme() {
     this.isDarkTheme = !this.isDarkTheme;
+  }
+
+  toggleDir() {
+    this.dir = this.dir == 'ltr' ? 'rtl' : 'ltr';
+    this.sidenav.toggle().then(() => this.sidenav.toggle());
   }
 
   constructor(
